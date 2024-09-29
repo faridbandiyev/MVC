@@ -1,0 +1,30 @@
+﻿@model StudentViewModel
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	StudentViewModel model = Model;
+
+	var students = model.Students;
+	var teachers = model.Teachers;
+}
+
+<p>Students</p>
+<ul>
+	@foreach (var student in students)
+	{
+		<li>
+			@student
+		</li>
+	}
+</ul>
+
+<p>Teachers</p>
+<ul>
+	@foreach (var teacher in teachers)
+	{
+		<li>
+			@teacher
+		</li>
+	}
+</ul>
